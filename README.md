@@ -1,0 +1,1 @@
+# solo-fpc1020am
