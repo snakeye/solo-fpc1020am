@@ -1699,11 +1699,11 @@ Part Number: BM10NB(0.8)-16DS-0.4V(51)
 <variantdefs>
 </variantdefs>
 <classes>
-<class number="0" name="default" width="0.1524" drill="0.2032">
-<clearance class="0" value="0.1016"/>
+<class number="0" name="default" width="0.15" drill="0.2">
+<clearance class="0" value="0.1"/>
 </class>
-<class number="1" name="nfc" width="0.0889" drill="0.2032">
-<clearance class="1" value="0.0889"/>
+<class number="1" name="power" width="0.2" drill="0.2">
+<clearance class="1" value="0.15"/>
 </class>
 </classes>
 <parts>
@@ -1957,7 +1957,7 @@ Part Number: BM10NB(0.8)-16DS-0.4V(51)
 <busses>
 </busses>
 <nets>
-<net name="+5V" class="0">
+<net name="+5V" class="1">
 <segment>
 <pinref part="P+5" gate="1" pin="+5V"/>
 <wire x1="78.74" y1="83.82" x2="78.74" y2="66.04" width="0.1524" layer="91"/>
@@ -2035,7 +2035,7 @@ Part Number: BM10NB(0.8)-16DS-0.4V(51)
 <pinref part="J1" gate="G$1" pin="D-"/>
 </segment>
 </net>
-<net name="GND" class="0">
+<net name="GND" class="1">
 <segment>
 <pinref part="SUPPLY3" gate="PE" pin="PE"/>
 <wire x1="93.98" y1="83.82" x2="93.98" y2="81.28" width="0.1524" layer="91"/>
@@ -2152,7 +2152,7 @@ Part Number: BM10NB(0.8)-16DS-0.4V(51)
 <pinref part="SUPPLY8" gate="PE" pin="PE"/>
 </segment>
 </net>
-<net name="+3V3" class="0">
+<net name="+3V3" class="1">
 <segment>
 <pinref part="+3V9" gate="G$1" pin="+3V3"/>
 <wire x1="152.4" y1="10.16" x2="152.4" y2="17.78" width="0.1524" layer="91"/>
@@ -2319,13 +2319,6 @@ Part Number: BM10NB(0.8)-16DS-0.4V(51)
 <wire x1="213.36" y1="114.3" x2="218.44" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="AMS_IRQ" class="0">
-<segment>
-<pinref part="ST2" gate="G$1" pin="PC15"/>
-<wire x1="195.58" y1="99.06" x2="198.12" y2="99.06" width="0.1524" layer="91"/>
-<label x="198.12" y="99.06" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="MISO" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="MISO"/>
@@ -2398,7 +2391,7 @@ Part Number: BM10NB(0.8)-16DS-0.4V(51)
 <label x="165.1" y="137.16" size="1.778" layer="95" rot="R90"/>
 </segment>
 </net>
-<net name="+1V8" class="0">
+<net name="+1V8" class="1">
 <segment>
 <pinref part="U$1" gate="G$1" pin="VDD"/>
 <wire x1="287.02" y1="119.38" x2="281.94" y2="119.38" width="0.1524" layer="91"/>
@@ -2444,16 +2437,38 @@ Part Number: BM10NB(0.8)-16DS-0.4V(51)
 </sheet>
 </sheets>
 <errors>
-<approved hash="104,1,132.08,60.96,L3,GND,PE,,,"/>
+<approved hash="102,1,134.62,152.4,PE,GND,,,,"/>
+<approved hash="102,1,93.98,83.82,PE,GND,,,,"/>
+<approved hash="102,1,132.08,15.24,PE,GND,,,,"/>
+<approved hash="102,1,139.7,53.34,PE,GND,,,,"/>
+<approved hash="102,1,238.76,93.98,PE,GND,,,,"/>
+<approved hash="102,1,195.58,71.12,PE,GND,,,,"/>
+<approved hash="102,1,104.14,137.16,PE,GND,,,,"/>
+<approved hash="102,1,287.02,111.76,PE,GND,,,,"/>
+<approved hash="102,1,50.8,68.58,PE,GND,,,,"/>
+<approved hash="102,1,340.36,147.32,PE,GND,,,,"/>
+<approved hash="102,1,139.7,33.02,PE,GND,,,,"/>
+<approved hash="102,1,147.32,33.02,PE,GND,,,,"/>
+<approved hash="102,1,299.72,45.72,PE,GND,,,,"/>
+<approved hash="104,1,287.02,124.46,U$1,VDDTX,+3V3,,,"/>
+<approved hash="104,1,287.02,121.92,U$1,VDDIO,+3V3,,,"/>
+<approved hash="104,1,287.02,119.38,U$1,VDD,+1V8,,,"/>
+<approved hash="104,1,48.26,81.28,J1,VBUS,+5V,,,"/>
+<approved hash="104,1,48.26,71.12,J1,SHIELD,GND,,,"/>
+<approved hash="104,1,299.72,60.96,U$4,VCC,+3V3,,,"/>
+<approved hash="208,1,281.94,119.38,+1V8,sup,,,,"/>
+<approved hash="208,1,132.08,40.64,+1V8,out,,,,"/>
+<approved hash="208,1,157.48,40.64,+1V8,sup,,,,"/>
 <approved hash="208,1,152.4,17.78,+3V3,sup,,,,"/>
 <approved hash="208,1,248.92,124.46,+3V3,sup,,,,"/>
 <approved hash="208,1,139.7,71.12,+3V3,sup,,,,"/>
 <approved hash="208,1,132.08,63.5,+3V3,out,,,,"/>
 <approved hash="208,1,124.46,129.54,+3V3,sup,,,,"/>
 <approved hash="208,1,210.82,63.5,+3V3,sup,,,,"/>
-<approved hash="208,1,243.84,63.5,+3V3,sup,,,,"/>
+<approved hash="208,1,86.36,134.62,+3V3,sup,,,,"/>
 <approved hash="208,1,182.88,60.96,+3V3,sup,,,,"/>
-<approved hash="208,1,248.92,139.7,+3V3,sup,,,,"/>
+<approved hash="208,1,281.94,124.46,+3V3,sup,,,,"/>
+<approved hash="208,1,299.72,60.96,+3V3,sup,,,,"/>
 </errors>
 </schematic>
 </drawing>
